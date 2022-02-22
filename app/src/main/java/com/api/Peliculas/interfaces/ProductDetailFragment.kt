@@ -12,6 +12,8 @@ import androidx.navigation.fragment.navArgs
 import com.api.Peliculas.datos.ProductObjectItem
 import com.api.Peliculas.databinding.FragmentProductDetailBinding
 import com.api.Peliculas.nucleo.NetworkManager
+import com.canitopai.proyectointegrador.ui.view.ProductDetailFragmentArgs
+import com.canitopai.proyectointegrador.ui.view.ProductDetailFragmentDirections
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

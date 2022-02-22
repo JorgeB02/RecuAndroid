@@ -1,6 +1,6 @@
 package com.api.Peliculas.datos
-import com.canitopai.proyectointegrador.data.model.ProductObjectItem
-import com.canitopai.proyectointegrador.data.model.ProductObjectRequest
+import com.api.Peliculas.datos.ProductObjectItem
+import com.api.Peliculas.datos.ProductObjectRequest
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.*
