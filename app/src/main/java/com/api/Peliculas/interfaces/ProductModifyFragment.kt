@@ -14,7 +14,7 @@ import com.api.Peliculas.databinding.FragmentProductDetailBinding
 import com.api.Peliculas.nucleo.NetworkManager
 import com.api.Peliculas.datos.ProductObjectRequest
 import com.api.Peliculas.databinding.FragmentProductModifyBinding
-import com.canitopai.proyectointegrador.ui.view.ProductModifyFragmentArgs
+import com.api.Peliculas.interfaces.ProductModifyFragmentArgs
 import kotlinx.android.synthetic.main.fragment_product_add.*
 import kotlinx.android.synthetic.main.fragment_product_modify.*
 import retrofit2.Call

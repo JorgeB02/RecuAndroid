@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.api.Peliculas.datos.ProductObjectItem
 import com.api.Peliculas.databinding.FragmentProductListBinding
 import com.api.Peliculas.nucleo.NetworkManager
-import com.canitopai.proyectointegrador.ui.view.ProductListFragmentDirections
+import com.api.Peliculas.interfaces.ProductListFragmentDirections
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

@@ -38,4 +38,4 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTitle"
         app:navGraph="@navigation/nav_graph"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>yout>
+</androidx.constraintlayout.widget.ConstraintLayout>
