@@ -8,7 +8,7 @@ data class ProductObjectItem(
     val pack: String,
     @SerializedName("description")
     val description: String,
-    @SerializedName("_id")
+    @SerializedName("id")
     val id: Int,
     @SerializedName("name")
     val name: String,

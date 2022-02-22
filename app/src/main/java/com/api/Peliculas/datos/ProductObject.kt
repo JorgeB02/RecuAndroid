@@ -5,7 +5,11 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 data class ProductObject(
-    @SerializedName("results")
+    @SerializedName("data")
     @Expose
-    val results: List<ProductObjectItem>
+    val data: List<ProductObjectItem>,
+@SerializedName("message")
+val message: String,
+@SerializedName("success")
+val success: Boolean
 )

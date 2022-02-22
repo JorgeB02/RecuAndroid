@@ -14,6 +14,7 @@ import com.api.Peliculas.nucleo.NetworkManager
 import com.api.Peliculas.datos.ProductObjectRequest
 import com.api.Peliculas.interfaces.ProductAddFragmentDirections
 import kotlinx.android.synthetic.main.fragment_product_add.*
+import kotlinx.android.synthetic.main.fragment_product_modify.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -22,6 +23,7 @@ import retrofit2.Response
 class ProductAddFragment : Fragment() {
     private var _binding: FragmentProductAddBinding? = null
     private val binding
+
         get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -54,8 +56,10 @@ class ProductAddFragment : Fragment() {
 
 
     }
+    var finalValue: Int = 0
     private fun postProduct() {
-        NetworkManager.service.savePost(ProductObjectRequest(etCat.text.toString(),etDesc.text.toString(),etName.text.toString(),3)).enqueue(object :
+        getNumericValue()
+        NetworkManager.service.savePost(ProductObjectRequest(etCat.text.toString(),etDesc.text.toString(),etName.text.toString(),finalValue)).enqueue(object :
             Callback<ProductObjectRequest> {
             override fun onResponse(call: Call<ProductObjectRequest>, response: Response<ProductObjectRequest>) {
                 if (response.isSuccessful) {
@@ -71,6 +75,11 @@ class ProductAddFragment : Fragment() {
                 Toast.makeText(context, "error de conexion", Toast.LENGTH_SHORT).show()
             }
         })
+    }
+
+    fun getNumericValue(){
+        val value: String = etPrice.getText().toString()
+        finalValue = value.toInt()
     }
     override fun onDestroyView() {
         super.onDestroyView()
