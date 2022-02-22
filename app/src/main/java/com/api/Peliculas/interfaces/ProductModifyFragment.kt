@@ -25,6 +25,11 @@ class ProductModifyFragment : Fragment() {
     private val args: ProductModifyFragmentArgs by navArgs()
     private var ValorInt: Int = 0
 
+    private var price: Int = 0
+    private var pack: String? = null
+    private var desc: String? = null
+    private var name: String = "Nombre"
+    private var myId: Int = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,

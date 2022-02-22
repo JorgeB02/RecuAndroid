@@ -89,8 +89,8 @@
 
     <TextView
         android:id="@+id/lblPrice"
-        android:layout_width="162dp"
-        android:layout_height="25dp"
+        android:layout_width="164dp"
+        android:layout_height="41dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/roboto_thin"
         android:text="Precio:"
@@ -114,27 +114,25 @@
         app:layout_constraintTop_toTopOf="@+id/lblPrice" />
 
     <Button
-        android:id="@+id/btnGuardar"
-        android:layout_width="143dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="120dp"
-        android:backgroundTint="#F9AA33"
-        android:text="Guardar"
-        app:cornerRadius="20dp"
-        app:layout_constraintStart_toStartOf="@+id/lblPrice"
-        app:layout_constraintTop_toBottomOf="@+id/lblPrice" />
-
-    <Button
         android:id="@+id/btnCancelar"
         android:layout_width="143dp"
         android:layout_height="60dp"
-        android:layout_marginStart="20dp"
-        android:backgroundTint="#F9AA33"
+        android:layout_marginStart="28dp"
+        android:backgroundTint="#EC281A"
         android:text="Cancelar"
-        app:cornerRadius="20dp"
         app:layout_constraintStart_toEndOf="@+id/btnGuardar"
         app:layout_constraintTop_toTopOf="@+id/btnGuardar" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="143dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="#EC281A"
+        android:text="Guardar"
+        app:layout_constraintStart_toStartOf="@+id/lblPrice"
+        app:layout_constraintTop_toBottomOf="@+id/lblPrice" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

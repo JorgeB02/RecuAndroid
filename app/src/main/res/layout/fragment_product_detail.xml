@@ -15,7 +15,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="84dp"
         android:fontFamily="@font/roboto_thin"
-        android:text="Nombre:"
+        android:text="Nombre producto:"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -31,7 +31,6 @@
         android:text="Nombre"
         android:textColor="@android:color/white"
         android:textSize="26dp"
-        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/lblName"
         app:layout_constraintTop_toTopOf="@+id/lblName" />
 
@@ -57,7 +56,6 @@
         android:text="Descripción"
         android:textColor="@android:color/white"
         android:textSize="24dp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/lblDesc"
         app:layout_constraintTop_toTopOf="@+id/lblDesc" />
 
@@ -86,7 +84,6 @@
         android:text="Categoría"
         android:textColor="@android:color/white"
         android:textSize="24dp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/tvDesc"
         app:layout_constraintTop_toTopOf="@+id/lblCategory" />
 
@@ -111,18 +108,16 @@
         android:text="Precio"
         android:textColor="@android:color/white"
         android:textSize="24dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tvCategory"
-        app:layout_constraintTop_toTopOf="@+id/lblPrice" />
+        app:layout_constraintTop_toTopOf="@+id/lblPrice"
+        tools:layout_editor_absoluteX="224dp" />
 
     <Button
         android:id="@+id/btnDelete"
         android:layout_width="143dp"
         android:layout_height="60dp"
         android:layout_marginTop="100dp"
-        android:backgroundTint="#F9AA33"
+        android:backgroundTint="#EC281A"
         android:text="Borrar"
-        app:cornerRadius="20dp"
         app:layout_constraintEnd_toStartOf="@+id/btnModify"
         app:layout_constraintHorizontal_bias="0.657"
         app:layout_constraintStart_toStartOf="parent"
@@ -133,9 +128,8 @@
         android:layout_width="143dp"
         android:layout_height="60dp"
         android:layout_marginEnd="52dp"
-        android:backgroundTint="#F9AA33"
+        android:backgroundTint="#EC281A"
         android:text="Modify"
-        app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnDelete" />
 
@@ -144,9 +138,8 @@
         android:layout_width="129dp"
         android:layout_height="53dp"
         android:layout_marginTop="40dp"
-        android:backgroundTint="#F9AA33"
+        android:backgroundTint="#EC281A"
         android:text="Volver"
-        app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnModify" />

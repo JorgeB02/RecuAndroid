@@ -23,6 +23,7 @@ class ProductDetailFragment : Fragment() {
     private var _binding: FragmentProductDetailBinding? = null
     private val binding
         get() = _binding!!
+
     private val args: ProductDetailFragmentArgs by navArgs()
 
     private var price: Int = 0
