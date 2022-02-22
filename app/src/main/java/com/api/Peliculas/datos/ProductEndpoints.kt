@@ -10,15 +10,15 @@ interface ProductEndpoints {
     fun getProducts(): Call<List<ProductObjectItem>>
 
     @GET("/products/{id}")
-    fun getProductDetailed(@Path("id")id: Int): Call<ProductObjectItem>?
+    fun getProductDetailed(@Path("id")id: String): Call<ProductObjectItem>?
 
     @POST("/products/create/")
     fun savePost(@Body post: ProductObjectRequest): Call<ProductObjectRequest>
 
     @PUT("/products/update/{id}")
-    fun savePut(@Path("id")id: Int,@Body post: ProductObjectItem): Call<ProductObjectItem>
+    fun savePut(@Path("id")id: String,@Body post: ProductObjectItem): Call<ProductObjectItem>
 
     @DELETE("/products/delete/{id}")
-    fun deletePost(@Path("id")id: Int): Call<Void>
+    fun deletePost(@Path("id")id: String): Call<Void>
 
 }
