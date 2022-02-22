@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/productListFragment"
-        android:name="com.canitopai.proyectointegrador.ui.view.ProductListFragment"
+        android:name="com.api.Peliculas.interfaces.ProductListFragment"
         android:label="fragment_product_list"
         tools:layout="@layout/fragment_product_list" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/productDetailFragment"
-        android:name="com.canitopai.proyectointegrador.ui.view.ProductDetailFragment"
+        android:name="com.api.Peliculas.interfaces.ProductDetailFragment"
         android:label="fragment_product_detail"
         tools:layout="@layout/fragment_product_detail" >
         <argument
@@ -47,7 +47,7 @@
         app:destination="@id/productListFragment" />
     <fragment
         android:id="@+id/productAddFragment"
-        android:name="com.canitopai.proyectointegrador.ui.view.ProductAddFragment"
+        android:name="com.api.Peliculas.interfaces.ProductAddFragment"
         android:label="fragment_product_add"
         tools:layout="@layout/fragment_product_add" >
         <action
@@ -56,7 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/productModifyFragment"
-        android:name="com.canitopai.proyectointegrador.ui.view.ProductModifyFragment"
+        android:name="com.api.Peliculas.interfaces.ProductModifyFragment"
         android:label="fragment_product_modify"
         tools:layout="@layout/fragment_product_modify" >
         <action
