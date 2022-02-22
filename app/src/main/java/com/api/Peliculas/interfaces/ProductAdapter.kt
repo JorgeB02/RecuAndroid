@@ -25,7 +25,6 @@ class ProductAdapter(private val onProductClicked: (ProductObjectItem) -> Unit) 
 
         holder.binding.tvItemName.text = Producto.name
         holder.binding.tvItemPrice.text = Producto.price.toString()
-        holder.binding.tvCat.text = Producto.pack
 
         holder.binding.root.setOnClickListener {
             onProductClicked(Producto)
