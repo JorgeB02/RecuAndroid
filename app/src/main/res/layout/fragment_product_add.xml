@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.ProductAddFragment" >
+
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="197dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="84dp"
+        android:fontFamily="@font/shojumaru"
+        android:text="Nombre producto:"
+        android:textColor="#E91E63"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/shojumaru"
+        android:text="Descripción:"
+        android:textColor="#E91E63"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblName"
+        app:layout_constraintTop_toBottomOf="@+id/lblName" />
+
+    <TextView
+        android:id="@+id/lblCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/shojumaru"
+        android:text="Categoría:"
+        android:textColor="#E91E63"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblDesc"
+        app:layout_constraintTop_toBottomOf="@+id/lblDesc" />
+
+    <TextView
+        android:id="@+id/lblPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/shojumaru"
+        android:text="Precio:"
+        android:textColor="#E91E63"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblCategory"
+        app:layout_constraintTop_toBottomOf="@+id/lblCategory" />
+
+    <Button
+        android:id="@+id/btnAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#E91E63"
+        android:text="Agregar"
+        app:cornerRadius="20dp"
+        app:iconTint="#E91E63"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblPrice" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="140dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="Nombre producto"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/lblName"
+        app:layout_constraintTop_toTopOf="@+id/lblName" />
+
+    <EditText
+        android:id="@+id/etDesc"
+        android:layout_width="335dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Descripcion"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/lblDesc"
+        app:layout_constraintTop_toTopOf="@+id/lblDesc" />
+
+    <EditText
+        android:id="@+id/etCat"
+        android:layout_width="159dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:ems="10"
+        android:hint="Categoria"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/lblCategory"
+        app:layout_constraintTop_toTopOf="@+id/lblCategory" />
+
+    <EditText
+        android:id="@+id/etPrice"
+        android:layout_width="173dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="79dp"
+        android:ems="10"
+        android:hint="Precio"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/lblPrice"
+        app:layout_constraintTop_toTopOf="@+id/lblPrice" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="129dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#E91E63"
+        android:text="Volver"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAgregar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
