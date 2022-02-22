@@ -6,19 +6,19 @@ import retrofit2.Response
 import retrofit2.http.*
 
 interface ProductEndpoints {
-    @GET("/api/todoitems/")
+    @GET("/products/")
     fun getProducts(): Call<List<ProductObjectItem>>
 
-    @GET("/api/todoitems/{id}")
+    @GET("/products/{id}")
     fun getProductDetailed(@Path("id")id: Int): Call<ProductObjectItem>?
 
-    @POST("/api/todoitems/")
+    @POST("/products/create/")
     fun savePost(@Body post: ProductObjectRequest): Call<ProductObjectRequest>
 
-    @PUT("{id}")
+    @PUT("/products/update/{id}")
     fun savePut(@Path("id")id: Int,@Body post: ProductObjectItem): Call<ProductObjectItem>
 
-    @DELETE("/api/todoitems/{id}")
+    @DELETE("/products/delete/{id}")
     fun deletePost(@Path("id")id: Int): Call<Void>
 
 }
