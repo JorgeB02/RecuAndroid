@@ -8,10 +8,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.canitopai.proyectointegrador.data.model.ProductObjectItem
-import com.canitopai.proyectointegrador.databinding.FragmentProductAddBinding
-import com.canitopai.proyectointegrador.core.NetworkManager
-import com.canitopai.proyectointegrador.data.model.ProductObjectRequest
+import com.api.Peliculas.datos.ProductObjectItem
+import com.api.Peliculas.databinding.FragmentProductAddBinding
+import com.api.Peliculas.nucleo.NetworkManager
+import com.api.Peliculas.datos.ProductObjectRequest
 import kotlinx.android.synthetic.main.fragment_product_add.*
 import retrofit2.Call
 import retrofit2.Callback

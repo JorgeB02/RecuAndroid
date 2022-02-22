@@ -1,6 +1,6 @@
 package com.api.Peliculas.nucleo
 
-import com.canitopai.proyectointegrador.data.network.ProductEndpoints
+import com.api.Peliculas.datos.ProductEndpoints
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

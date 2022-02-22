@@ -9,9 +9,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.canitopai.proyectointegrador.data.model.ProductObjectItem
-import com.canitopai.proyectointegrador.databinding.FragmentProductDetailBinding
-import com.canitopai.proyectointegrador.core.NetworkManager
+import com.api.Peliculas.datos.ProductObjectItem
+import com.api.Peliculas.databinding.FragmentProductDetailBinding
+import com.api.Peliculas.nucleo.NetworkManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

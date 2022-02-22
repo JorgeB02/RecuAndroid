@@ -9,10 +9,10 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.api.Peliculas.data.model.ProductObjectItem
+import com.api.Peliculas.datos.ProductObjectItem
 import com.api.Peliculas.databinding.FragmentProductDetailBinding
-import com.api.Peliculas.core.NetworkManager
-import com.api.Peliculas.data.model.ProductObjectRequest
+import com.api.Peliculas.nucleo.NetworkManager
+import com.api.Peliculas.datos.ProductObjectRequest
 import com.api.Peliculas.databinding.FragmentProductModifyBinding
 import kotlinx.android.synthetic.main.fragment_product_add.*
 import kotlinx.android.synthetic.main.fragment_product_modify.*
