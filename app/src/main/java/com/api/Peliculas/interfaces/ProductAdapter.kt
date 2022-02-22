@@ -21,14 +21,14 @@ class ProductAdapter(private val onProductClicked: (ProductObjectItem) -> Unit) 
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val prod = getItem(position)
+        val Producto = getItem(position)
 
-        holder.binding.tvItemName.text = prod.name
-        holder.binding.tvItemPrice.text = prod.price.toString()
-        holder.binding.tvCat.text = prod.pack
+        holder.binding.tvItemName.text = Producto.name
+        holder.binding.tvItemPrice.text = Producto.price.toString()
+        holder.binding.tvCat.text = Producto.pack
 
         holder.binding.root.setOnClickListener {
-            onProductClicked(prod)
+            onProductClicked(Producto)
         }
     }
 

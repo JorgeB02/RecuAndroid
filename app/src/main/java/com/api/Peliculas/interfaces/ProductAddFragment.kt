@@ -8,13 +8,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.api.Peliculas.datos.ProductObjectItem
 import com.api.Peliculas.databinding.FragmentProductAddBinding
 import com.api.Peliculas.nucleo.NetworkManager
 import com.api.Peliculas.datos.ProductObjectRequest
-import com.api.Peliculas.interfaces.ProductAddFragmentDirections
 import kotlinx.android.synthetic.main.fragment_product_add.*
-import kotlinx.android.synthetic.main.fragment_product_modify.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -56,10 +53,10 @@ class ProductAddFragment : Fragment() {
 
 
     }
-    var finalValue: Int = 0
+    var ValorInt: Int = 0
     private fun postProduct() {
         getNumericValue()
-        NetworkManager.service.savePost(ProductObjectRequest(etCat.text.toString(),etDesc.text.toString(),etName.text.toString(),finalValue)).enqueue(object :
+        NetworkManager.service.savePost(ProductObjectRequest(etCat.text.toString(),etDesc.text.toString(),etName.text.toString(),ValorInt)).enqueue(object :
             Callback<ProductObjectRequest> {
             override fun onResponse(call: Call<ProductObjectRequest>, response: Response<ProductObjectRequest>) {
                 if (response.isSuccessful) {
@@ -78,8 +75,8 @@ class ProductAddFragment : Fragment() {
     }
 
     fun getNumericValue(){
-        val value: String = etPrice.getText().toString()
-        finalValue = value.toInt()
+        val sacarInt: String = etPrice.getText().toString()
+        ValorInt = sacarInt.toInt()
     }
     override fun onDestroyView() {
         super.onDestroyView()

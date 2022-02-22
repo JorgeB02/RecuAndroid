@@ -30,14 +30,14 @@ class ProductListFragment : Fragment() {
     private val adapter = ProductAdapter {
 
 
-        val action = ProductListFragmentDirections.actionProductListFragmentToProductDetailFragment(
+        val hacedor = ProductListFragmentDirections.actionProductListFragmentToProductDetailFragment(
             it.name,
             it.pack,
             it.description,
             it.price,
             it.id
         )
-        findNavController().navigate(action)
+        findNavController().navigate(hacedor)
 
     }
 
@@ -59,9 +59,9 @@ class ProductListFragment : Fragment() {
         binding.rvProduct.layoutManager = GridLayoutManager(context, 1)
         binding.rvProduct.adapter = adapter
         binding.btnAdd.setOnClickListener{
-            val action = ProductListFragmentDirections.actionProductListFragmentToProductAddFragment(
+            val hacedor = ProductListFragmentDirections.actionProductListFragmentToProductAddFragment(
             )
-            findNavController().navigate(action)
+            findNavController().navigate(hacedor)
         }
         requestData()
     }

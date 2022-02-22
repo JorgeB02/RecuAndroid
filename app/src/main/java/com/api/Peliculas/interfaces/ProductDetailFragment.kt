@@ -25,10 +25,10 @@ class ProductDetailFragment : Fragment() {
         get() = _binding!!
     private val args: ProductDetailFragmentArgs by navArgs()
 
-    private var name: String = "Nombre"
-    private var desc: String? = null
-    private var pack: String? = null
     private var price: Int = 0
+    private var pack: String? = null
+    private var desc: String? = null
+    private var name: String = "Nombre"
     private var myId: Int = 0
 
     override fun onCreateView(
@@ -78,13 +78,13 @@ class ProductDetailFragment : Fragment() {
 
         binding.btnModify.setOnClickListener {
             //ir a modify
-            val action = ProductDetailFragmentDirections.actionProductDetailFragmentToProductModifyFragment(args.myId
+            val hacedor = ProductDetailFragmentDirections.actionProductDetailFragmentToProductModifyFragment(args.myId
             )
-            findNavController().navigate(action)
+            findNavController().navigate(hacedor)
         }
         binding.btnBack.setOnClickListener {
-            val action = ProductDetailFragmentDirections.actionProductDetailFragmentToProductListFragment()
-            findNavController().navigate(action)
+            val hacedor = ProductDetailFragmentDirections.actionProductDetailFragmentToProductListFragment()
+            findNavController().navigate(hacedor)
         }
 
     }
@@ -95,9 +95,7 @@ class ProductDetailFragment : Fragment() {
 
     private fun requestData() {
 
-
         NetworkManager.service.getProductDetailed(args.myId)?.enqueue(object : Callback<ProductObjectItem?> {
-
 
             override fun onFailure(call: Call<ProductObjectItem?>, t: Throwable) {
                 Toast.makeText(

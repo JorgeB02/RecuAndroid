@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="#E91E63"
-    tools:context=".ui.view.ProductModifyFragment">
+    tools:context=".interfaces.ProductModifyFragment">
 
     <TextView
         android:id="@+id/lblName"
@@ -15,7 +15,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="84dp"
         android:fontFamily="@font/roboto_thin"
-        android:text="Nombre producto:"
+        android:text="Nombre :"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -24,11 +24,12 @@
 
     <EditText
         android:id="@+id/etModName"
-        android:layout_width="159dp"
-        android:layout_height="38dp"
+        android:layout_width="189dp"
+        android:layout_height="40dp"
         android:layout_marginStart="24dp"
         android:fontFamily="@font/balthazar"
         android:minHeight="48dp"
+        android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/lblName"
         app:layout_constraintTop_toTopOf="@+id/lblName" />
@@ -48,12 +49,13 @@
 
     <EditText
         android:id="@+id/etModDesc"
-        android:layout_width="159dp"
-        android:layout_height="33dp"
+        android:layout_width="189dp"
+        android:layout_height="40dp"
         android:layout_marginStart="192dp"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/balthazar"
         android:minHeight="48dp"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/lblDesc"
         app:layout_constraintTop_toTopOf="@+id/lblDesc" />
@@ -75,11 +77,12 @@
 
     <EditText
         android:id="@+id/etModCat"
-        android:layout_width="156dp"
-        android:layout_height="36dp"
+        android:layout_width="189dp"
+        android:layout_height="40dp"
         android:layout_marginStart="24dp"
         android:fontFamily="@font/balthazar"
         android:minHeight="48dp"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/lblCategory"
         app:layout_constraintTop_toTopOf="@+id/lblCategory" />
@@ -99,27 +102,16 @@
 
     <EditText
         android:id="@+id/etModPrice"
-        android:layout_width="154dp"
-        android:layout_height="41dp"
+        android:layout_width="189dp"
+        android:layout_height="40dp"
         android:layout_marginStart="32dp"
         android:fontFamily="@font/balthazar"
         android:inputType="number"
         android:minHeight="48dp"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/lblPrice"
         app:layout_constraintTop_toTopOf="@+id/lblPrice" />
-
-    <TextView
-        android:id="@+id/lblCurrency"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:fontFamily="@font/balthazar"
-        android:text="€"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/tvPrice"
-        app:layout_constraintTop_toTopOf="@+id/tvPrice" />
 
     <Button
         android:id="@+id/btnGuardar"

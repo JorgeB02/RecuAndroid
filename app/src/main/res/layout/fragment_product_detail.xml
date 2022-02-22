@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="#E91E63"
-    tools:context=".ui.view.ProductDetailFragment">
+    tools:context=".interfaces.ProductDetailFragment">
 
     <TextView
         android:id="@+id/lblName"
@@ -15,7 +15,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="84dp"
         android:fontFamily="@font/roboto_thin"
-        android:text="Nombre producto:"
+        android:text="Nombre:"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -31,6 +31,7 @@
         android:text="Nombre"
         android:textColor="@android:color/white"
         android:textSize="26dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/lblName"
         app:layout_constraintTop_toTopOf="@+id/lblName" />
 
@@ -56,6 +57,7 @@
         android:text="Descripción"
         android:textColor="@android:color/white"
         android:textSize="24dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/lblDesc"
         app:layout_constraintTop_toTopOf="@+id/lblDesc" />
 
@@ -79,11 +81,13 @@
         android:id="@+id/tvCategory"
         android:layout_width="143dp"
         android:layout_height="32dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/roboto_thin"
         android:text="Categoría"
         android:textColor="@android:color/white"
         android:textSize="24dp"
-        app:layout_constraintEnd_toEndOf="@+id/tvName"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvDesc"
         app:layout_constraintTop_toTopOf="@+id/lblCategory" />
 
     <TextView
@@ -107,7 +111,8 @@
         android:text="Precio"
         android:textColor="@android:color/white"
         android:textSize="24dp"
-        app:layout_constraintEnd_toEndOf="@+id/tvCategory"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvCategory"
         app:layout_constraintTop_toTopOf="@+id/lblPrice" />
 
     <Button
