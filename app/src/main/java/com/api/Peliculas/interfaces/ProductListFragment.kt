@@ -32,7 +32,7 @@ class ProductListFragment : Fragment() {
 
         val action = ProductListFragmentDirections.actionProductListFragmentToProductDetailFragment(
             it.name,
-            it.category,
+            it.pack,
             it.description,
             it.price,
             it.id

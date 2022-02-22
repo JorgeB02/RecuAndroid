@@ -27,7 +27,7 @@ class ProductDetailFragment : Fragment() {
 
     private var name: String = "Nombre"
     private var desc: String? = null
-    private var category: String? = null
+    private var pack: String? = null
     private var price: Int = 0
     private var myId: Int = 0
 
@@ -48,7 +48,7 @@ class ProductDetailFragment : Fragment() {
 
             name = it.getString(name).toString()
             desc = it.getString(desc).toString()
-            category = it.getString(category).toString()
+            pack = it.getString(pack).toString()
             price = it.getInt(price.toString())
 
         }
