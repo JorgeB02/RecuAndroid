@@ -25,7 +25,7 @@
         android:id="@+id/Search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="4dp"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="textPersonName"
@@ -33,18 +33,6 @@
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/ReloadData"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="119dp"
-        android:layout_height="57dp"
-        android:layout_marginBottom="13dp"
-        android:backgroundTint="#0557FA"
-        android:fontFamily="@font/aladin2"
-        android:text="@string/add"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnBuscar"
@@ -62,9 +50,21 @@
         android:background="#00804A4A"
         app:icon="@android:drawable/ic_popup_sync"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="119dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="#0557FA"
+        android:fontFamily="@font/aladin2"
+        android:text="@string/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ProgressBar
         android:id="@+id/progressBar"
