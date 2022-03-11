@@ -1,4 +1,4 @@
-package com.api.Peliculas.datos
+package com.api.Peliculas.data.model
 
 
 import com.google.gson.annotations.Expose
@@ -8,8 +8,8 @@ data class ProductObject(
     @SerializedName("data")
     @Expose
     val data: List<ProductObjectItem>,
-@SerializedName("message")
-val message: String,
-@SerializedName("success")
-val success: Boolean
+    @SerializedName("message")
+    val message: String,
+    @SerializedName("success")
+    val success: Boolean
 )

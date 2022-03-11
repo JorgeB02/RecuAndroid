@@ -1,4 +1,4 @@
-package com.api.Peliculas.interfaces
+package com.api.Peliculas.ui.view/*package com.api.Peliculas.interfaces
 
 import android.os.Bundle
 import android.util.Log
@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.api.Peliculas.datos.ProductObjectItem
+import com.api.Peliculas.datos.model.ProductObjectItem
 import com.api.Peliculas.nucleo.NetworkManager
 import com.api.Peliculas.databinding.FragmentProductModifyBinding
 import kotlinx.android.synthetic.main.fragment_product_modify.*
@@ -91,4 +91,4 @@ class ProductModifyFragment : Fragment() {
     }
 }
 
-
+*/

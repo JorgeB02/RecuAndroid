@@ -1,4 +1,4 @@
-package com.api.Peliculas.interfaces
+package com.api.Peliculas.ui.view
 
 import android.os.Bundle
 import android.util.Log
@@ -9,35 +9,41 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.api.Peliculas.datos.ProductObjectItem
-import com.api.Peliculas.databinding.FragmentProductDetailBinding
-import com.api.Peliculas.nucleo.NetworkManager
-import com.api.Peliculas.interfaces.ProductDetailFragmentArgs
-import com.api.Peliculas.interfaces.ProductDetailFragmentDirections
+import com.api.Peliculas.R
+import com.api.Peliculas.data.model.ProductObjectItem
+import com.api.Peliculas.core.NetworkManager
+import com.api.Peliculas.data.database.ProductModel
+import com.api.Peliculas.databinding.ProductDetailBinding
+import com.squareup.picasso.Picasso
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 
+
+
 class ProductDetailFragment : Fragment() {
-    private var _binding: FragmentProductDetailBinding? = null
+    private var _binding: ProductDetailBinding? = null
     private val binding
         get() = _binding!!
 
     private val args: ProductDetailFragmentArgs by navArgs()
 
-    private var price: Int = 0
-    private var pack: String? = null
+    private var stock: Int = 0
     private var desc: String? = null
+    private var myId: String = ("fb36491d-7c21-40ef-9f67-a63237b5bbea");
     private var name: String = "Nombre"
-    private var myId: Int = 0
+    private var price: Float = 0.00F
+    private var discountprice: Float = 0.00F
+    private var available: Boolean = true
+    private var imageURL: String = "nose"
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentProductDetailBinding.inflate(inflater, container, false)
+        _binding = ProductDetailBinding.inflate(inflater, container, false)
 
         return binding.root
     }
@@ -49,14 +55,31 @@ class ProductDetailFragment : Fragment() {
 
             name = it.getString(name).toString()
             desc = it.getString(desc).toString()
-            pack = it.getString(pack).toString()
-            price = it.getInt(price.toString())
+            stock = it.getInt(stock.toString())
+            price = it.getFloat(price.toString())
+            discountprice = it.getFloat(discountprice.toString())
+            desc = it.getString(desc).toString()
+            available = it.getBoolean(available.toString())
+            imageURL = it.getString(imageURL).toString()
+
 
         }
         binding.tvName.text = args.name
-        binding.tvCategory.text = args.desc
-        binding.tvDesc.text = args.category
+        binding.tvDesc.text = args.desc
+        binding.tvStock.text = args.stock
         binding.tvPrice.text = args.price.toString()
+        binding.tvPrecioDes.text = args.discountPrice.toString()
+        binding.tvDisp.text = args.available.toString()
+        Picasso.get()
+            .load(args.imageURL)
+            .resize(350,350)
+            .centerCrop()
+            .placeholder(R.drawable.ic_launcher_background)
+            .into(binding.imageView2)
+
+
+
+
 
         binding.btnDelete.setOnClickListener {
             //ir a list y pasar por parametro el id que va a borrar
@@ -64,8 +87,12 @@ class ProductDetailFragment : Fragment() {
                 Callback<Void>{
                 override fun onResponse(call: Call<Void>, response: Response<Void>) {
                     if (response.isSuccessful) {
-                        Toast.makeText(context, "Pasa por el put", Toast.LENGTH_SHORT).show()
-                        Log.e("Network", "put hecho con éxito")
+                        Toast.makeText(context, "Elemento Eliminado", Toast.LENGTH_SHORT).show()
+                        Log.e("Network", "Eliminacion Completa")
+                        val hacedor = ProductDetailFragmentDirections.actionProductDetailFragmentToProductListFragment()
+
+                        findNavController().navigate(hacedor)
+
                     } else {
                         Log.e("Network", "error en la conexion on Response")
                     }
@@ -77,12 +104,7 @@ class ProductDetailFragment : Fragment() {
             })
         }
 
-        binding.btnModify.setOnClickListener {
-            //ir a modify
-            val hacedor = ProductDetailFragmentDirections.actionProductDetailFragmentToProductModifyFragment(args.myId
-            )
-            findNavController().navigate(hacedor)
-        }
+
         binding.btnBack.setOnClickListener {
             val hacedor = ProductDetailFragmentDirections.actionProductDetailFragmentToProductListFragment()
             findNavController().navigate(hacedor)
@@ -116,6 +138,29 @@ class ProductDetailFragment : Fragment() {
                 } else {
                     Toast.makeText(context, "400", Toast.LENGTH_SHORT).show()
                 }
+                val productfav = ProductModel(
+                response.body()?.stock.toString().toInt(),
+                response.body()?.description.toString(),
+                null,
+                response.body()?.name.toString(),
+                response.body()?.price.toString().toFloat(),
+                response.body()?.discountPrice.toString().toFloat(),
+                true,
+                    response.body()?.imageURL.toString()
+                )
+
+                binding.btnfav.setOnClickListener {
+                    val Comprobante = db.productDao().exists(binding.tvName.text.toString())
+                    if(Comprobante == true){
+                        Toast.makeText(context, "Ya en favoritos", Toast.LENGTH_SHORT).show()
+                    }else{
+                        db.productDao().add(productfav)
+                        Toast.makeText(context, "Elemento añadido en Favoritos", Toast.LENGTH_SHORT).show()
+                    }
+
+
+
+                }
             }
 
         })
@@ -126,5 +171,8 @@ class ProductDetailFragment : Fragment() {
         _binding = null
     }
 }
+
+
+
 
 
